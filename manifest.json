@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Ventana Emergente",
+    "version": "0.1",
+    "description": "Crea una ventana emergente que hace algo",
+    "browser_action": {
+    "default_icon": "/assets/Icon.png",
+    "default_popup": "popup.html"
+    },
+    "permissions": [
+      "activeTab",
+      "storage",
+      "https://www.youtube.com/*"
+    ],
+    "content_scripts":[
+    {
+      "matches":["https://www.youtube.com/*"],
+      "js":["content.js"]
+    }
+    ]
+  }
